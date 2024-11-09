@@ -1,0 +1,121 @@
+ body {
+            display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Menambahkan ini untuk memastikan body memenuhi tinggi viewport */
+    margin: 0;
+    background-color: #f8f9fa;
+    color: #212529;
+        }
+        body::before {
+        content: "";
+        position: absolute;
+        margin-top: 20px;
+        top: 50%; /* Mengatur posisi vertikal ke tengah */
+        left: 50%; /* Mengatur posisi horizontal ke tengah */
+        width: 90%; /* Mengatur lebar agar sesuai dengan viewport */
+        height: 85%; /* Mengatur tinggi agar sesuai dengan viewport */
+        background-image: url('/PROJEK2/images/logoathirah.png');
+        background-repeat: no-repeat;
+        background-position: center; /* Posisikan gambar di tengah */
+        background-size: contain; /* Sesuaikan ukuran gambar */
+        transform: translate(-50%, -50%); /* Pindahkan elemen ke tengah */
+        opacity: 0.10; /* Transparansi */
+        z-index: -1; /* Agar berada di belakang konten */
+        }
+
+        table {
+            background-color: white;
+        }
+        .logo {
+            width: 150px;
+            margin-right: 20px;
+        }
+        .header-title {
+            display: flex;
+            align-items: center;
+        }
+        .navbar {
+        background-color: green;
+    }
+    .navbar a {
+        color: white !important;
+    }
+    .navbar-nav .nav-link {
+    font-size: 1em; /* Ukuran font default */
+    padding: 10px 15px; /* Tambahkan padding untuk jarak di dalam kolom */
+    transition: all 1s ease; /* Transisi yang halus untuk efek hover */
+    background-color: green; /* Warna latar belakang awal */
+    border-radius: 5px; /* Membuat sedikit sudut melengkung */
+    }
+
+    .navbar-nav .nav-link:hover {
+        font-size: 1.1em; /* Membesarkan ukuran font sedikit saat hover */
+        background-color: #28a745; /* Warna hijau lebih terang saat hover */
+        color: white; /* Warna teks tetap putih */
+        transition: all 0.3s ease; /* Efek transisi yang halus */
+    }
+
+    .navbar-nav .nav-link:focus {
+        background-color: #218838; /* Warna hijau yang lebih gelap saat ditekan */
+        color: white; /* Warna teks tetap putih */
+    }
+
+        .dropdown-menu {
+            animation: dropdown-animation 0.3s ease-in-out;
+        }
+        @keyframes dropdown-animation {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .dropdown-toggle::after {
+            display: none;
+        }
+        .dropdown-item {
+            white-space: nowrap;
+        }
+        .search-input {
+            margin-bottom: 20px;
+        }
+        .status-hijau {
+            color: green !important;
+            font-weight: bold;
+        }
+        .status-merah {
+            color: red !important;
+            font-weight: bold;
+        }
+        tbody tr td {
+            color: black;
+        }
+        .pagination .page-link {
+        border: none;
+        background-color: transparent;
+        }
+        .bi-arrow-left-circle, .bi-arrow-right-circle {
+        font-size: 1.5rem;
+        color: green;
+        }
+        .pagination {
+        justify-content: flex-end; /* Agar tombol berada di ujung kanan */
+        }
+        .pagination .page-link:focus, .pagination .page-link:active {
+        outline: none; /* Hilangkan outline default */
+        box-shadow: 0 0 0 4px rgba(0, 128, 0, 0.5); /* Warna hijau di sekeliling */
+        background-color: transparent; /* Warna background tetap transparan */
+        }
+
+        footer {
+        background-color: green;
+        color: white;
+        padding: 10px;
+        min-height: 50px; /* Tentukan tinggi minimum footer */
+        width: 100%;
+        text-align: center;
+        margin-top: auto; /* Menambahkan ini agar footer selalu berada di bawah */
+        }

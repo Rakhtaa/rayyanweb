@@ -1,0 +1,218 @@
+ /* Mengatur html dan body agar menjadi elemen Flexbox */
+ html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #f8f9fa;
+    color: #212529;
+}
+body::before {
+    content: "";
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    width: 75%;
+    height: 75%; 
+    background-image: url('/PROJEK2/images/logoathirah.png');   
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-size: contain; 
+    background-attachment: fixed;
+    transform: translate(-50%, -50%); 
+    opacity: 0.1;
+    z-index: -1; 
+}
+.zoomed-image {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+.zoomed-image img {
+    max-width: 90%;
+    max-height: 90%;
+    transition: transform 0.2s ease; /* Tambahkan efek transisi */
+}
+.container.content {
+    flex: 1;
+    padding-bottom: 60px;
+    z-index: 1;
+}
+
+.navbar {
+    background-color: green;
+}
+
+.navbar a {
+    color: white !important;
+}
+
+.navbar-nav .nav-link {
+    margin-top: 5px;
+    font-size: 1em;
+    padding: 10px 15px;
+    transition: all 1s ease;
+    background-color: green;
+    border-radius: 5px;
+}
+
+.navbar-nav .nav-link:hover {
+    font-size: 1.1em;
+    background-color: #28a745;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:focus {
+    background-color: #218838;
+    color: white;
+}
+.about-section {
+    position: relative;
+    color: white;
+    padding: 40px;
+    border-radius: 8px;
+    overflow: hidden; /* Memastikan video tetap dalam area section */
+}
+
+/* Video Background */
+.about-section video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Memastikan video menutupi seluruh section */
+    z-index: 0;
+}
+
+/* Overlay */
+.about-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay hitam transparan */
+    z-index: 1;
+}
+
+/* Konten dalam section */
+.about-section h3,
+.about-section p {
+    position: relative;
+    z-index: 2;
+}
+
+.about-section h3 {
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.about-section p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: justify;
+}
+.chart-caption {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1em;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+footer {
+    background-color: green;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    margin-top: auto;
+    width: 100%;
+}
+
+/* Responsiveness for mobile */
+@media (max-width: 768px) {
+    body::before {
+        width: 90%;
+        height: 90%;
+    }
+    .container {
+        padding-bottom: 100px;
+    }
+    .navbar {
+        background-color: green;
+    }
+    .navbar-nav .nav-link {
+        padding: 8px 10px;
+    }
+}
+
+/* Styling untuk Quotes */
+.quote {
+    font-size: 2.0em; /* Ukuran font yang lebih besar */
+    font-family: 'Georgia', serif; /* Font yang lebih elegan */
+    font-weight: bold; /* Membuat font lebih tebal */
+    text-align: center;
+    color: #343a40;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Efek bayangan untuk teks */
+    line-height: 1.4;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.student-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.btn-outline-success {
+    border-color: #28a745;
+    color: #28a745;
+    background-color: transparent;
+}
+
+.btn-outline-success:hover {
+    background-color: #28a745;
+    color: white;
+    border-color: #28a745;
+}
+
+.btn-absensi {
+    font-size: 1.2em;
+    padding: 12px 25px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+/* Menyesuaikan untuk mobile */
+@media (max-width: 768px) {
+    .d-flex {
+        display: flex;
+        justify-content: center; /* Horizontal center */
+        align-items: center;     /* Vertical center (opsional jika ingin di tengah vertikal juga) */
+        height: 30vh;           /* Pastikan div memiliki tinggi layar penuh */
+    }
+
+    .btn-outline-success {
+        border-color: #28a745;
+        color: #28a745;
+        background-color: transparent;
+    }
+
+    .btn-outline-success:hover {
+        background-color: #28a745;
+        color: white;
+        border-color: #28a745;
+    }
+}

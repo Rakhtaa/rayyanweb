@@ -1,0 +1,96 @@
+body {
+    height: 100%; 
+    margin: 0; 
+    position: relative;
+    background-color: #f8f9fa;
+    color: #212529;
+    overflow: auto;
+}
+body::before {
+    content: "";
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    width: 75%;
+    height: 75%; 
+    background-image: url('/PROJEK2/images/logoathirah.png');   
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-size: contain; 
+    background-attachment: fixed;
+    transform: translate(-50%, -50%); 
+    opacity: 0.1;
+    z-index: -1; 
+}
+.content {
+    position: relative;
+    flex: 1;
+    padding-bottom: 60px; 
+    z-index: 1; 
+}
+table {
+    width: 100%; 
+    table-layout: fixed; 
+}
+.navbar {
+    background-color: green;                              
+}
+.navbar a {
+    color: white !important;
+}
+.navbar-nav .nav-link {
+    margin-top: 5px;
+    font-size: 1em;
+    padding: 10px 15px; 
+    transition: all 1s ease; 
+    background-color: green;
+    border-radius: 5px; 
+}
+.navbar-nav .nav-link:hover {
+    font-size: 1.1em; 
+    background-color: #28a745;
+    color: white; 
+    transition: all 0.3s ease; 
+}
+.navbar-nav .nav-link:focus {
+    background-color: #218838; 
+    color: white; 
+}
+.profile-info {                                                 
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 20px; 
+    color: #333; 
+}
+footer {
+    background-color: green;
+    color: white;
+    padding: 10px;
+    min-height: 50px; 
+    width: 100%;
+    text-align: center;
+}
+.status-hijau {
+    color: green !important;
+    font-weight: bold;
+}
+.status-merah {
+    color: red !important;
+    font-weight: bold;
+}
+@media (max-width: 768px) {
+body::before {
+    width: 90%;
+    height: 90%;
+}
+.content {
+    padding-bottom: 100px;
+}
+.navbar {
+    background-color: green;
+    height: auto; 
+}
+.navbar-nav .nav-link {
+    padding: 8px 10px; 
+}
+}

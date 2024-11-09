@@ -1,0 +1,92 @@
+body {
+display: flex;
+flex-direction: column;
+min-height: 100vh;
+margin: 0;
+background-color: #f8f9fa;
+color: #212529;
+overflow-x: hidden;
+}
+
+body::before {
+content: "";
+position: absolute;
+top: 50%;
+left: 50%;
+width: 75%;
+height: 75%;
+background-image: url('/PROJEK2/images/logoathirah.png');
+background-repeat: no-repeat;
+background-position: center;
+background-size: contain;
+background-attachment: fixed;
+transform: translate(-50%, -50%);
+opacity: 0.1;
+z-index: -1;
+}
+
+.container {
+max-width: 600px;
+margin: auto;
+flex-grow: 1; /* Membuat container mengambil ruang yang tersisa */
+padding: 20px;
+}
+
+.footer {
+background-color: green;
+color: white;
+padding: 10px;
+text-align: center;
+width: 100%;
+flex-shrink: 0; /* Menjaga footer tetap berada di bagian bawah */
+height: 50px;
+position: relative;
+}
+
+.content {
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.navbar {
+    background-color: green;
+}
+
+.navbar a {
+    color: white !important;
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+.password-container {
+    position: relative;
+}
+
+.password-container .toggle-password {
+    position: absolute;
+    top: 70%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+body::before {
+width: 90%;
+height: 90%;
+}
+.content {
+padding-bottom: 100px;
+}
+
+.navbar {
+background-color: green;
+height: auto;
+}
+
+.navbar-nav .nav-link {
+padding: 8px 10px;
+}
+}
